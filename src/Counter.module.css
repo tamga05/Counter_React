@@ -30,6 +30,7 @@
     font-size: 120px;
     font-weight: 600;
     color: #2a2c36;
+    text-shadow: 3px 5px 5px #2a2c36;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,6 +40,7 @@
 .scoreRed {
     color: red;
     font-weight: 700;
+    text-shadow: 3px 5px 5px white;
 }
 
 .control {
