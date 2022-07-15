@@ -1,0 +1,18 @@
+.button{
+    width: 150px;
+    height: 75px;
+    border: 3px solid #61dafb;
+    border-radius: 10px;
+    background-color: #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    font-weight: 600;
+    color: #383838;
+    cursor: pointer;
+}
+
+.button:last-child {
+    width: 220px;
+}
