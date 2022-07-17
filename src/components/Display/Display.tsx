@@ -1,5 +1,5 @@
 import React from 'react';
-import s from '../../Counter.module.css';
+import s from './Display.module.css';
 
 
 type DisplayType = {
