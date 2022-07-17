@@ -1,5 +1,4 @@
 .counter {
-    /*text-align: center;*/
     height: 100vh;
     background-color: #2a2c36;
     display: flex;
@@ -17,7 +16,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /*gap: 20px;*/
 }
 
 .score {
@@ -33,14 +31,15 @@
     justify-content: center;
     align-items: center;
     cursor: default;
+    transition: 0.5s ease;
 }
 
 .scoreRed {
     color: red;
     font-size: 170px;
-    transition: 0.5s ease;
     text-shadow: 4px 6px 5px #2a2c36;
     padding-bottom: 20px;
+    transition: 0.5s ease;
 }
 
 .control {

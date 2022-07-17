@@ -15,5 +15,3 @@ export const Display = (props: DisplayType) => {
         </div>
     )
 }
-
-

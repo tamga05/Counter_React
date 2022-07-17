@@ -11,7 +11,7 @@ function App() {
 
     let [count, setCount] = useState(minValue);
 
-    const onClickIncrement = () => {
+    const onClickPlus = () => {
         if (count < maxValue) { // Ограничение МАКСИМАЛЬНО вводимого числа
             setCount(count + 1)
         }
@@ -26,7 +26,7 @@ function App() {
             <div className={s.inner}>
                 <Display count={count}/>
                 <div className={s.control}>
-                    <Button title={'plus'} callBack={onClickIncrement} isDisabled={count === 5}/>
+                    <Button title={'plus'} callBack={onClickPlus} isDisabled={count === 5}/>
                     <Button title={'reset'} callBack={onClickReset} isDisabled={count === 0}/>
                 </div>
             </div>
