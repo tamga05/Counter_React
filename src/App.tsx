@@ -7,13 +7,13 @@ import {Display} from './components/Display/Display';
 function App() {
 
     const minValue = 0;
-    const maxValue = 5; // Ограничение МАКСИМАЛЬНО значения числа, до которого считает счетчик
+    const maxValue = 5; // Ограничение МАКСИМАЛЬНОГО значения числа, до которого считает счетчик
 
     let [count, setCount] = useState(minValue);
 
     const onClickPlus = () => {
         if (count < maxValue) { // Ограничение МАКСИМАЛЬНО вводимого числа
-            setCount(count + 1)
+            setCount(count + 1) // Именно такой синтаксис Правильный, а не ++count !!!
         }
     }
 
