@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
 import s from './Counter.module.css'
-import {Button} from './components/Button/Button';
 import {Display} from './components/Display/Display';
+import {ControlBlock} from './components/ControlBlock/ControlBlock';
+import {SetValueBlock} from './components/SetValueBlock/SetValueBlock';
+import {SetValueDisplay} from './components/SetValueDisplay/SetValueDisplay';
 
 
 function App() {
 
     const minValue = 0;
     const maxValue = 5; // Ограничение МАКСИМАЛЬНОГО значения числа, до которого считает счетчик
+
 
     let [count, setCount] = useState(minValue);
 
@@ -21,14 +24,19 @@ function App() {
         setCount(minValue)
     }
 
+    // const onClickSetValue = () => {
+    //
+    // }
+
     return (
         <div className={s.counter}>
             <div className={s.inner}>
+                <SetValueDisplay/>
+                <SetValueBlock/>
+            </div>
+            <div className={s.inner}>
                 <Display count={count}/>
-                <div className={s.control}>
-                    <Button title={'plus'} callBack={onClickPlus} isDisabled={count === 5}/>
-                    <Button title={'reset'} callBack={onClickReset} isDisabled={count === 0}/>
-                </div>
+                <ControlBlock onClickPlus={onClickPlus} onClickReset={onClickReset} count={count}/>
             </div>
         </div>
     )

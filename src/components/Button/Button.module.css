@@ -13,6 +13,10 @@
     cursor: pointer;
 }
 
+.button:hover {
+    color: red;
+}
+
 .button:active {
     color: white;
     border: 2px solid white;
@@ -20,6 +24,10 @@
 
 .button:last-child {
     width: 220px;
+}
+
+.button:first-child {
+    width: 150px;
 }
 
 .button:disabled {
