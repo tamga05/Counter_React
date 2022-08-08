@@ -4,32 +4,39 @@ import s from './SetValueDisplay.module.css'
 
 export const SetValueDisplay = () => {
 
-    let [maxValue, setMaxValue] = useState()
+    let [maxValue, setMaxValue] = useState('0')
 
-    let [startValue, setStartValue] = useState()
+    let [startValue, setStartValue] = useState('0')
 
 
     const onChangeSetMaxValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setMaxValue(e.currentTarget.value)
         localStorage.setItem('maxValue', JSON.stringify(e.currentTarget.value))
-        setMaxValue(maxValue)
+        // localStorage.setItem('maxValue', maxValue)
     }
 
     const onChangeSetStartValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        if (+e.currentTarget.value < 0) {
-
-        } else {
-            localStorage.setItem('startValue', JSON.stringify(e.currentTarget.value))
-            setStartValue(startValue)
-        }
+        setStartValue(e.currentTarget.value)
+        localStorage.setItem('startValue', JSON.stringify(e.currentTarget.value))
+        // localStorage.setItem('startValue', startValue)
     }
+
+    // const getMaxValue = () => {
+    //     let maxValueString = localStorage.getItem('maxValue')
+    //     if (maxValueString) {
+    //         maxValue = JSON.parse(maxValueString)
+    //         setMaxValue(maxValue)
+    //     }
+    // }
+
 
     return (
         <div className={s.inner}>
             <div className={s.inputBlock}>
-                max value: <input type="number" onChange={onChangeSetMaxValueHandler}/>
+                max value: <input type="number" onChange={onChangeSetMaxValueHandler} value={maxValue}/>
             </div>
             <div className={s.inputBlock}>
-                start value: <input type="number" onChange={onChangeSetStartValueHandler}/>
+                start value: <input type="number" onChange={onChangeSetStartValueHandler} value={startValue}/>
             </div>
         </div>
     )

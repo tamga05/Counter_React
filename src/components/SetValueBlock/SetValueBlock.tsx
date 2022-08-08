@@ -1,26 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './SetValueBlock.module.css'
 import {Button} from '../Button/Button';
 
 
-// type SetValueBlockType = {
-//     // onClickSetValue: () => void
-//     // title: string
-// }
+type SetValueBlockType = {
+    onClickSetValue: () => void
+}
 
 
-
-export const SetValueBlock = () => {
-
-    let [startValue, setStartValue] = useState(0)
-
-    const onClickSetValue = () => {
-
-    }
+export const SetValueBlock = (props: SetValueBlockType) => {
 
     return (
         <div className={s.control}>
-            <Button title={'set'} callBack={onClickSetValue} isDisabled={false}/>
+            <Button title={'set'} callBack={props.onClickSetValue} isDisabled={false}/>
         </div>
     )
 }
