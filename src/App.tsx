@@ -8,11 +8,10 @@ import {SetValueDisplay} from './components/SetValueDisplay/SetValueDisplay';
 
 function App() {
 
-    const minValue = 0;
-    const maxValue = 5; // Ограничение МАКСИМАЛЬНОГО значения числа, до которого считает счетчик
+    const startValue = 0;
+    const maxValue = 5;
 
-
-    let [count, setCount] = useState(minValue);
+    let [count, setCount] = useState(startValue);
 
     const onClickPlus = () => {
         if (count < maxValue) { // Ограничение МАКСИМАЛЬНО вводимого числа
@@ -21,18 +20,18 @@ function App() {
     }
 
     const onClickReset = () => {
-        setCount(minValue)
+        setCount(startValue)
     }
 
-    // const onClickSetValue = () => {
-    //
-    // }
+    const onClickSetValue = () => {
+
+    }
 
     return (
         <div className={s.counter}>
             <div className={s.inner}>
                 <SetValueDisplay/>
-                <SetValueBlock/>
+                <SetValueBlock onClickSetValue={onClickSetValue}/>
             </div>
             <div className={s.inner}>
                 <Display count={count}/>

@@ -11,6 +11,7 @@ type ControlBlockType = {
 
 
 export const ControlBlock = (props: ControlBlockType) => {
+
     return (
         <div className={s.control}>
             <Button title={'plus'} callBack={props.onClickPlus} isDisabled={props.count === 5}/>
