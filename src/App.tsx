@@ -27,6 +27,16 @@ function App() {
 
     }
 
+    // Проверка Вводимых значений и Отрисовка информационной надписи на дисплее
+    // const changeMaxValue = (max: number) => {
+    //     setMaxValue(max)
+    //     if (max < 0 || max <= startValue) {
+    //         setMessage('Incorrect values!')
+    //     } else {
+    //         setMessage('Enter values and press set')
+    //     }
+    // }
+
     return (
         <div className={s.counter}>
             <div className={s.inner}>
