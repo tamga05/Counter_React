@@ -4,7 +4,7 @@ import s from './SetValueDisplay.module.css'
 
 export const SetValueDisplay = () => {
 
-    let [maxValue, setMaxValue] = useState('0')
+    let [maxValue, setMaxValue] = useState('5')
 
     let [startValue, setStartValue] = useState('0')
 
@@ -21,13 +21,11 @@ export const SetValueDisplay = () => {
         // localStorage.setItem('startValue', startValue)
     }
 
-    // const getMaxValue = () => {
     //     let maxValueString = localStorage.getItem('maxValue')
     //     if (maxValueString) {
     //         maxValue = JSON.parse(maxValueString)
     //         setMaxValue(maxValue)
     //     }
-    // }
 
 
     return (
